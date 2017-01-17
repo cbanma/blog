@@ -3121,12 +3121,3 @@ body {
   background: #4d4d4d;
   font-size: 0.8em;
 }
-#muzik {
-  -webkit-transition: 0.3s right linear;
-  -moz-transition: 0.3s right linear;
-  -ms-transition: 0.3s right linear;
-  transition: 0.3s right linear;
-}
-#muzik:hover {
-  right: 0;
-}
