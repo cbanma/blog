@@ -224,11 +224,11 @@ function createInstructions() {
 	var randNum=(1 + Math.round(Rand * Range));   
 	//动态文本
 	text.innerHTML =randNum==1&&
-	'<span style="color:' + theme[0] + ';font-size:35px;">MajorMayer</span><br><br><span style="font-size:15px;"><strong>NET | H5 Coder</strong><br><br>一个懵逼,茫然<br>不知所措<br>求收留の<br>程序员<br>小弟</span>'
+	'<span style="color:' + theme[0] + ';font-size:35px;">MajorMayer</span><br /><br /><span style="font-size:15px;"><strong>NET | H5 Coder</strong><br /><br />一个懵逼,茫然<br />不知所措<br />求收留の<br />程序员<br />小弟</span>'
 	||randNum==2&&
-	'<span style="color:' + theme[0] + ';font-size:35px;">小周周</span><br><br><span style="font-size:15px;"><strong>noob coder</strong><br><br>不要给我说什么<br>框架内核<br>底层原理<br>本少写代码<br>复制!粘贴!</span>'
+	'<span style="color:' + theme[0] + ';font-size:35px;">小周周</span><br /><br /><span style="font-size:15px;"><strong>noob coder</strong><br /><br />不要给我说什么<br />框架内核<br />底层原理<br />本少写代码<br />复制!粘贴!</span>'
 	||randNum==3&&
-	'<span style="color:' + theme[0] + ';font-size:35px;">佚名</span><br><br><span style="font-size:15px;"><strong>你要拒绝我?</strong><br><br>你走开<br>不认识你了<br>宝宝心里苦<br>蓝瘦....<br>香菇....</span>'
+	'<span style="color:' + theme[0] + ';font-size:35px;">佚名</span><br /><br /><span style="font-size:15px;"><strong>你要拒绝我?</strong><br /><br />你走开<br />不认识你了<br />宝宝心里苦<br />蓝瘦....<br />香菇....</span>'
 	text.style.color = theme[1];
 	text.style.position = 'absolute';
 	text.style.left = '0px';
