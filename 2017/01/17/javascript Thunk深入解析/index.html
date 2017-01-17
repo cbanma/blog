@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="MajorMayer">
 <meta property="og:description" content="Thunk函数的诞生是源于一个编译器设计的问题：求值策略，即函数的参数到底应该何时求值。">
 <meta property="og:image" content="https://segmentfault.com/img/bVFJOD?w=592&h=80">
-<meta property="og:updated_time" content="2017-01-17T02:52:47.770Z">
+<meta property="og:updated_time" content="2017-01-17T02:55:05.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript Thunk深入解析">
 <meta name="twitter:description" content="Thunk函数的诞生是源于一个编译器设计的问题：求值策略，即函数的参数到底应该何时求值。">
@@ -313,8 +313,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Thunk函数的诞生是源于一个编译器设计的问题：求值策略，即函数的参数到底应该何时求值。<br><a id="more"></a></p>
-<h3 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">m</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> m * <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line">f(x + <span class="number">5</span>);</div></pre></td></tr></table></figure>
+        <p>Thunk函数的诞生是源于一个编译器设计的问题：求值策略，即函数的参数到底应该何时求值。<br><a id="more"></a><br>例如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">m</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> m * <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line">f(x + <span class="number">5</span>);</div></pre></td></tr></table></figure></p>
 <p>其中x+5这个表达式应该什么时候求值，有两种思路</p>
 <ol>
 <li>传值调用(call by value)，即在进入函数体之间，先计算x+5的值，再将这个值（6）传入函数f，例如c语言，这种做法的好处是实现比较简单，但是有可能会造成性能损失。</li>
@@ -360,7 +359,7 @@
         <p><span>本文标题:</span><a href="/2017/01/17/javascript Thunk深入解析/">Javascript Thunk深入解析</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">MajorMayer</a></p>
         <p><span>发布时间:</span>2017-01-17, 10:45:27</p>
-        <p><span>最后更新:</span>2017-01-17, 10:52:47</p>
+        <p><span>最后更新:</span>2017-01-17, 10:55:05</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/01/17/javascript Thunk深入解析/" title="Javascript Thunk深入解析">http://majormayer.oschina.io/2017/01/17/javascript Thunk深入解析/</a>
             <span class="copy-path" data-clipboard-text="原文: http://majormayer.oschina.io/2017/01/17/javascript Thunk深入解析/　　作者: MajorMayer" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -379,7 +378,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#例如："><span class="toc-number">1.</span> <span class="toc-text">例如：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Thunk函数的含义"><span class="toc-number">2.</span> <span class="toc-text">Thunk函数的含义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript中的Thunk函数"><span class="toc-number">3.</span> <span class="toc-text">javascript中的Thunk函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打造thunkify模块"><span class="toc-number">4.</span> <span class="toc-text">打造thunkify模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#来源"><span class="toc-number">5.</span> <span class="toc-text">来源</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Thunk函数的含义"><span class="toc-number">1.</span> <span class="toc-text">Thunk函数的含义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript中的Thunk函数"><span class="toc-number">2.</span> <span class="toc-text">javascript中的Thunk函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打造thunkify模块"><span class="toc-number">3.</span> <span class="toc-text">打造thunkify模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#来源"><span class="toc-number">4.</span> <span class="toc-text">来源</span></a></li></ol>
         
     </div>
     <style>
