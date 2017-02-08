@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://majormayer.oschina.io/2017/02/08/使用not()选择器来决定表单是否显示边框/index.html">
 <meta property="og:site_name" content="MajorMayer">
 <meta property="og:description" content="利用:not()选择器可以匹配非指定元素/选择器的每个元素。现在利用该选择器来实现一个导航栏效果">
-<meta property="og:updated_time" content="2017-02-08T05:36:26.604Z">
+<meta property="og:updated_time" content="2017-02-08T05:47:25.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 技巧 > 使用 :Not() 选择器来决定表单是否显示边框">
 <meta name="twitter:description" content="利用:not()选择器可以匹配非指定元素/选择器的每个元素。现在利用该选择器来实现一个导航栏效果">
@@ -174,6 +174,8 @@
                         
                             <li><a href="/about/">简历</a></li>
                         
+                            <li><a href="/demos/">我的作品</a></li>
+                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
@@ -249,6 +251,8 @@
                 
                     <li><a href="/about/">简历</a></li>
                 
+                    <li><a href="/demos/">我的作品</a></li>
+                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
@@ -314,7 +318,7 @@
         <p>利用<code>:not()</code>选择器可以匹配非指定元素/选择器的每个元素。<br>现在利用该选择器来实现一个导航栏效果<br><a id="more"></a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>个人<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>博客<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>关于<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">font-family</span>: <span class="string">"Oswald"</span>, sans-serif;</div><div class="line">  <span class="attribute">line-height</span>: <span class="number">1.25</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">nav</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#384150</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">2em</span>;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">nav</span> <span class="selector-tag">ul</span> &#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">nav</span> <span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">display</span>: inline-block;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</div><div class="line">  <span class="attribute">padding</span>: .<span class="number">25em</span> <span class="number">1em</span>;</div><div class="line">  <span class="attribute">text-transform</span>: uppercase;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">nav</span> <span class="selector-tag">li</span><span class="selector-pseudo">:not(</span><span class="selector-pseudo">:last-child)</span> &#123;</div><div class="line">  <span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#666</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">nav</span> <span class="selector-tag">a</span> &#123;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#666</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">text-decoration</span>: none;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">nav</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#8bc34a</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>效果</strong>:</p>
-<html class=""><br><head><br><style>body {<br>  font-family: “Oswald”, sans-serif;<br>  line-height: 1.25;<br>  margin: 0;<br>}<br>nav {<br>  background: #384150;<br>  padding: 2em;<br>  text-align: center;<br>}<br>nav ul {<br>  padding: 0;<br>}<br>nav li {<br>  display: inline-block;<br>  font-size: 1.5em;<br>  padding: .25em 1em;<br>  text-transform: uppercase;<br>}<br>nav li:not(:last-child) {<br>  border-right: 1px solid #666;<br>}<br>nav a {<br>  border-bottom: 3px solid #666;<br>  color: #ccc;<br>  text-decoration: none;<br>}<br>nav a:hover {<br>  border-bottom: 3px solid #8bc34a;<br>}</style></head><body><br><nav><br>  <ul><br>    <li><a href="#">首页</a></li><br>    <li><a href="#">个人</a></li><br>    <li><a href="#">博客</a></li><br>    <li><a href="#">关于</a></li><br>  </ul><br></nav><br><br></body></html>
+<ifram src="http://majormayer.oschina.io/demos/index.html" style="width:100%;height:138px"></ifram>
       
     </div>
     
@@ -325,7 +329,7 @@
         <p><span>本文标题:</span><a href="/2017/02/08/使用not()选择器来决定表单是否显示边框/">CSS 技巧 &gt; 使用 :Not() 选择器来决定表单是否显示边框</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">MajorMayer</a></p>
         <p><span>发布时间:</span>2017-02-08, 13:30:59</p>
-        <p><span>最后更新:</span>2017-02-08, 13:36:26</p>
+        <p><span>最后更新:</span>2017-02-08, 13:47:25</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/02/08/使用not()选择器来决定表单是否显示边框/" title="CSS 技巧 &gt; 使用 :Not() 选择器来决定表单是否显示边框">http://majormayer.oschina.io/2017/02/08/使用not()选择器来决定表单是否显示边框/</a>
             <span class="copy-path" data-clipboard-text="原文: http://majormayer.oschina.io/2017/02/08/使用not()选择器来决定表单是否显示边框/　　作者: MajorMayer" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
